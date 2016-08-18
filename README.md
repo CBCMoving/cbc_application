@@ -1,1 +1,3 @@
-# cbc_application
+# Api for cbc application
+
+- Authenticate
