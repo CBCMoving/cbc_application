@@ -13,6 +13,20 @@ If authentication is successful, the server returns `username`, `access_token`.
 	}
 ```
 
+**Missing required fields:**
+```
+[
+	{
+		"field":"username",
+		"message":"Username cannot be blank."
+	},
+	{
+		"field":"password",
+		"message":"Password cannot be blank."
+	}
+]
+```
+
 **Invalid username/password:**
 ```
 	[
