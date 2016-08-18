@@ -1,3 +1,3 @@
 # Api for cbc application
 
-- Authenticate
+- Authenticate https://github.com/CBCMoving/cbc_application/blob/master/Authenticate.md
