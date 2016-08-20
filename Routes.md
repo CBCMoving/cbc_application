@@ -2,22 +2,22 @@
 Method: `GET` Url: `http://domain/api/route?access-token=xxxxxxxxxxxxxxxxxxx`
 ### Returns properties:
 
-Property|Type|Description
-    - | - | -
-id| INT | Route identifier
-date|STRING|Format: `M/d/Y` (Aug/25/2016)
-name|STRING| Name
-frame_open|STRING \| ""| Frame open
-frame_close|STRING \| ""| Frame close
-stops|INT \| null| Stops
-time_start|STRING \| ""|Format `h:i A` (3:35 PM) 
-time_end|STRING \| ""|Format `h:i A` (3:35 PM) 
-door|STRING \| ""|Door 
-truck|STRING \| ""|Truck 
-miles_start|INT \| null| Miles start
-miles_end|INT \| null| Miles end
-limit_cub_ft|INT \| null| Limit cubic ft
-limit_stops|INT \| null| Limit stops
+Property | Type | Description
+-------- | ---- | -----------
+id | INT | Route identifier
+date | STRING | Format: `M/d/Y` (Aug/25/2016)
+name | STRING | Name
+frame_open | STRING \| "" | Frame open
+frame_close | STRING \| "" | Frame close
+stops | INT \| null | Stops
+time_start | STRING \| "" | Format `h:i A` (3:35 PM) 
+time_end | STRING \| "" | Format `h:i A` (3:35 PM) 
+door | STRING \| "" | Door 
+truck | STRING \| "" | Truck 
+miles_start | INT \| null | Miles start
+miles_end | INT \| null | Miles end
+limit_cub_ft | INT \| null | Limit cubic ft
+limit_stops | INT \| null | Limit stops
 
 ### Example response:
 ```
@@ -60,33 +60,35 @@ limit_stops|INT \| null| Limit stops
 Method: `GET` Url: `http://domain/api/route/<ID>?access-token=xxxxxxxxxxxxxxxxxxx`
 ### Returns properties:
 
-Property|Type|Description
-    - | - | -
-id| INT | Route identifier
-date|STRING|Format: `M/d/Y` (Aug/25/2016)
-name|STRING| Name
-frame_open|STRING \| ""| Frame open
-frame_close|STRING \| ""| Frame close
-stops|INT \| null| Stops
-time_start|STRING \| ""|Format `h:i A` (3:35 PM) 
-time_end|STRING \| ""|Format `h:i A` (3:35 PM) 
-door|STRING \| ""|Door 
-truck|STRING \| ""|Truck 
-miles_start|INT \| null| Miles start
-miles_end|INT \| null| Miles end
-limit_cub_ft|INT \| null| Limit cubic ft
-limit_stops|INT \| null| Limit stops
-notes|[]|[See below](https://github.com/CBCMoving/cbc_application/blob/master/Routes.md#route-notes) &darr;
-orders|[]|[See below](https://github.com/CBCMoving/cbc_application/blob/master/Routes.md#orders) &darr;
+Property | Type | Description
+-------- | ---- | -----------
+id | INT | Route identifier
+date | STRING | Format: `M/d/Y` (Aug/25/2016)
+name | STRING | Name
+frame_open | STRING \| "" | Frame open
+frame_close | STRING \| "" | Frame close
+stops | INT \| null | Stops
+time_start | STRING \| "" | Format `h:i A` (3:35 PM) 
+time_end | STRING \| "" | Format `h:i A` (3:35 PM) 
+door | STRING \| "" | Door 
+truck | STRING \| "" | Truck 
+miles_start | INT \| null | Miles start
+miles_end | INT \| null | Miles end
+limit_cub_ft | INT \| null | Limit cubic ft
+limit_stops | INT \| null | Limit stops
+notes | [] | [See below](https://github.com/CBCMoving/cbc_application/blob/master/Routes.md#route-notes) &darr;
+orders | [] | [See below](https://github.com/CBCMoving/cbc_application/blob/master/Routes.md#orders) &darr;
 
 # Route notes
 Returns array of json object with note.
 ### Returns properties:
-Property|Type|Description
-    - | - | -
-id| INT | Note identifier
-text| STRING | Text note
-image| STRING \| null| `Url` to image without domain. If not exist `null`
+
+Property | Type | Description
+-------- | ---- | -----------
+id | INT | Note identifier
+text | STRING | Text note
+image | STRING \| null | `Url` to image without domain. If not exist `null`
+
 ### Example response:
 ```
   "notes": [
@@ -117,31 +119,31 @@ image| STRING \| null| `Url` to image without domain. If not exist `null`
 With orders returns associated data: `items`, `notes`.
 ### Returns properties:
 
-| Property | Type | Description |
-   | --- | --- | ---|
-| id | INT | Order identifier |
-| order_number | STRING | Order number |
-| address1 | STRING | Address |
-| city | STRING | City |
-| status |STRING | Status |
-| type | STRING | Type |
-| customer | STRING \| "" | Customer name |
-| address2 | STRING \| "" | Additional address |
-| zip | STRING \| "" | Zip |
-| phone | STRING \| "" | Phone number |
-| phone_home | STRING \| "" | Phone home |
-| phone_other | STRING \| "" | Phone other |
-| fax | STRING \| "" | Fax |
-| pieces | INT \| null | Pieces |
-| cartons | INT \| null | Cartons |
-| description | STRING \| "" | Order description |
-| precall | STRING \| "" | Precall date (custom format) |
-| time_from | STRING \| "" | Format: `h:i A` (10:10 AM) |
-| time_to | STRING \| "" | Format: `h:i A` (10:10 AM) |
-| spec_instruction | STRING \| "" | Special instruction |
-| service | STRING \| "" | If exist: (`WG|T|RC`) |
-| items | [] | [See below](https://github.com/CBCMoving/cbc_application/blob/master/Routes.md#order-items) &darr; |
-| notes | [] | [See below](https://github.com/CBCMoving/cbc_application/blob/master/Routes.md#order-notes) &darr; |
+Property | Type | Description
+-------- | ---- | -----------
+id | INT | Order identifier 
+order_number | STRING | Order number 
+address1 | STRING | Address 
+city | STRING | City 
+status |STRING | Status 
+type | STRING | Type 
+customer | STRING \| "" | Customer name 
+address2 | STRING \| "" | Additional address 
+zip | STRING \| "" | Zip 
+phone | STRING \| "" | Phone number 
+phone_home | STRING \| "" | Phone home 
+phone_other | STRING \| "" | Phone other 
+fax | STRING \| "" | Fax 
+pieces | INT \| null | Pieces 
+cartons | INT \| null | Cartons 
+description | STRING \| "" | Order description 
+precall | STRING \| "" | Precall date (custom format) 
+time_from | STRING \| "" | Format: `h:i A` (10:10 AM) 
+time_to | STRING \| "" | Format: `h:i A` (10:10 AM) 
+spec_instruction | STRING \| "" | Special instruction 
+service | STRING \| "" | If exist: (`WG|T|RC`) 
+items | [] | [See below](https://github.com/CBCMoving/cbc_application/blob/master/Routes.md#order-items) &darr; 
+notes | [] | [See below](https://github.com/CBCMoving/cbc_application/blob/master/Routes.md#order-notes) &darr; 
 
 ### Example response:
 ```
@@ -176,15 +178,15 @@ With orders returns associated data: `items`, `notes`.
 # Order items
 ### Returns properties:
 
-Property|Type|Description
-    - | - | -
+Property | Type | Description
+-------- | ---- | -----------
 id | INT | Item identifier
-quantity| INT| Quantity
-weight| INT \| null| Weight
-cubic_feet| INT \| null| Cubic feet
-commodity| STRING \| ""| Commodity
-model| STRING \| "" | Model
-description| STRING \| "" | Item description
+quantity | INT | Quantity
+weight | INT \| null | Weight
+cubic_feet | INT \| null | Cubic feet
+commodity | STRING \| "" | Commodity
+model | STRING \| "" | Model
+description | STRING \| "" | Item description
 
 ### Example response:
 ```
@@ -222,12 +224,12 @@ description| STRING \| "" | Item description
 Will be loaded only notes for driver.
 ### Note properties:
 
-Property|Type|Description
-    - | - | -
+Property | Type | Description
+---------| ---- | -----------
 id | INT | Note identifier
-text| STRING| Text note
-image| STRING \| null| `Url` to image without domain. If not exist `null`
-created_at| STRING | Created date, format: `D/m/Y` (Aug/25/2016)
+text | STRING | Text note
+image | STRING \| null | `Url` to image without domain. If not exist `null`
+created_at | STRING | Created date, format: `D/m/Y` (Aug/25/2016)
 created_by | STRING | Creator username
 
 # Common route json
