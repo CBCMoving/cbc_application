@@ -96,22 +96,16 @@ image | STRING \| null | `Url` to image without domain. If not exist `null`
       "id": 18,
       "text": "asdasd123",
       "image": "/uploads/notes/C-G7AauUSlt97pbgfedXoi1lmHxpfMIa.png",
-      "created_at": "Aug/02/2016",
-      "created_by": "asd"
     },
     {
       "id": 19,
       "text": "sdsasdfsdfsdfsdfsdf",
       "image": null,
-      "created_at": "Aug/05/2016",
-      "created_by": "serqio"
     },
     {
       "id": 25,
       "text": "sdfsdfsdfsdfsdf",
       "image": "/uploads/notes/sU-XHc3aTsjhDQ9BrI11VZ_AoGEcZGAn.jpg",
-      "created_at": "Aug/20/2016",
-      "created_by": "serqio"
     }
   ]
 ```
