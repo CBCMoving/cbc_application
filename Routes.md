@@ -73,8 +73,8 @@ miles_start|INT \| null| Miles start
 miles_end|INT \| null| Miles end
 limit_cub_ft|INT \| null| Limit cubic ft
 limit_stops|INT \| null| Limit stops
-notes|[]|[See below](https://www.google.com) &darr;
-orders|[]|[See below](https://www.google.com) &darr;
+notes|[]|[See below](https://github.com/CBCMoving/cbc_application/blob/master/Routes.md#route-notes) &darr;
+orders|[]|[See below](https://github.com/CBCMoving/cbc_application/blob/master/Routes.md#orders) &darr;
 # Route notes
 Returns array of json object with note.
 ### Returns properties:
@@ -135,8 +135,8 @@ time_from | STRING \| "" | Format: `h:i A` (10:10 AM)
 time_to | STRING \| "" | Format: `h:i A` (10:10 AM)
 spec_instruction| STRING \| "" | Special instruction
 service | STRING \| ""| If exist: (`WG|T|RC`)
-items | [] | [See below](https://www.google.com) &darr;
-notes | [] | [See below](https://www.google.com) &darr;
+items | [] | [See below](https://github.com/CBCMoving/cbc_application/blob/master/Routes.md#order-items) &darr;
+notes | [] | [See below](https://github.com/CBCMoving/cbc_application/blob/master/Routes.md#order-notes) &darr;
 ### Example response:
 ```
 "orders": [
@@ -426,15 +426,16 @@ Methods: `PATCH`, `PUT`.
 Url: `http://domain/api/route/<ID>?access-token=xxxxxxxxxxxxxxxxxxx`
 All params transmitted to the body of the request in json format.
 > Sent should be only parameters which you want to change. Empty or null parameter will overwrite current value.
+
 ### Avilable params:
-Property|Type|Description
-    - | - | -
-miles_start|INTEGER|Miles start
-miles_end|INTEGER|Miles end
-time_start|STRING|Format: `h:i A` (10:15 PM)
-time_end|STRING|Format: `h:i A` (10:15 PM)
-truck| STRING| Truck
-door| STRING| Door
+|Property|Type|Description|
+   | ----- | ----- | ---- |
+|miles_start|INTEGER|Miles start|
+|miles_end|INTEGER|Miles end|
+|time_start|STRING|Format: `h:i A` (10:15 PM)|
+|time_end|STRING|Format: `h:i A` (10:15 PM)|
+|truck| STRING| Truck|
+|door| STRING| Door|
 ### Example request
 ```
     $ curl -H "Content-Type: application/json" -X PUT -d '{"time_end":"10:20 AM"}' http://cbc.com/api/route/4?access-token=xxxxxxxxxxxxxxxxxxxxxxxxx
