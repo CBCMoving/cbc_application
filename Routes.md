@@ -1,6 +1,7 @@
 # Get 5 the latest routes from today
 Method: `GET` Url: `http://domain/api/route?access-token=xxxxxxxxxxxxxxxxxxx`
 ### Returns properties:
+
 Property|Type|Description
     - | - | -
 id| INT | Route identifier
@@ -17,6 +18,7 @@ miles_start|INT \| null| Miles start
 miles_end|INT \| null| Miles end
 limit_cub_ft|INT \| null| Limit cubic ft
 limit_stops|INT \| null| Limit stops
+
 ### Example response:
 ```
 [
@@ -57,6 +59,7 @@ limit_stops|INT \| null| Limit stops
 # Load more information by route
 Method: `GET` Url: `http://domain/api/route/<ID>?access-token=xxxxxxxxxxxxxxxxxxx`
 ### Returns properties:
+
 Property|Type|Description
     - | - | -
 id| INT | Route identifier
@@ -75,6 +78,7 @@ limit_cub_ft|INT \| null| Limit cubic ft
 limit_stops|INT \| null| Limit stops
 notes|[]|[See below](https://github.com/CBCMoving/cbc_application/blob/master/Routes.md#route-notes) &darr;
 orders|[]|[See below](https://github.com/CBCMoving/cbc_application/blob/master/Routes.md#orders) &darr;
+
 # Route notes
 Returns array of json object with note.
 ### Returns properties:
@@ -112,6 +116,7 @@ image| STRING \| null| `Url` to image without domain. If not exist `null`
 # Orders
 With orders returns associated data: `items`, `notes`.
 ### Returns properties:
+
 | Property | Type | Description |
    | --- | --- | ---|
 | id | INT | Order identifier |
@@ -137,6 +142,7 @@ With orders returns associated data: `items`, `notes`.
 | service | STRING \| "" | If exist: (`WG|T|RC`) |
 | items | [] | [See below](https://github.com/CBCMoving/cbc_application/blob/master/Routes.md#order-items) &darr; |
 | notes | [] | [See below](https://github.com/CBCMoving/cbc_application/blob/master/Routes.md#order-notes) &darr; |
+
 ### Example response:
 ```
 "orders": [
@@ -169,6 +175,7 @@ With orders returns associated data: `items`, `notes`.
 ```
 # Order items
 ### Returns properties:
+
 Property|Type|Description
     - | - | -
 id | INT | Item identifier
@@ -178,6 +185,7 @@ cubic_feet| INT \| null| Cubic feet
 commodity| STRING \| ""| Commodity
 model| STRING \| "" | Model
 description| STRING \| "" | Item description
+
 ### Example response:
 ```
 "items": [
@@ -213,6 +221,7 @@ description| STRING \| "" | Item description
 # Order notes
 Will be loaded only notes for driver.
 ### Note properties:
+
 Property|Type|Description
     - | - | -
 id | INT | Note identifier
@@ -220,6 +229,7 @@ text| STRING| Text note
 image| STRING \| null| `Url` to image without domain. If not exist `null`
 created_at| STRING | Created date, format: `D/m/Y` (Aug/25/2016)
 created_by | STRING | Creator username
+
 # Common route json
 ```
 {
@@ -476,13 +486,3 @@ door | STRING | Door
   }
 ]
 ```
-
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
-
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column \|"" | Content in the second column
