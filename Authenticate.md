@@ -2,14 +2,15 @@
 Authentication url: `http://domain/api/auth`.
 Avilable methods: `POST`, `PUT`.
 Required params: `username`, `password` transmitted to the body of the request in json format.
-If authentication is successful, the server returns `username`, `access_token`. 
+If authentication is successful, the server returns `username`, `access_token`, `office`. 
 `access_token` must be sent in each request: `http://domain/api/action?access-token=xxxxxxxxxxxxxxxxxx`.
 
 **Successful response:**
 ```
 	{
 		"username": "super_driver",
-		"access_token": "PyYdSlQOqoH_u-TBU_PeliF1xiZAiQxS"
+		"access_token": "PyYdSlQOqoH_u-TBU_PeliF1xiZAiQxS",
+		"office":"Kent"
 	}
 ```
 
