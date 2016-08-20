@@ -428,14 +428,16 @@ All params transmitted to the body of the request in json format.
 > Sent should be only parameters which you want to change. Empty or null parameter will overwrite current value.
 
 ### Avilable params:
-|Property|Type|Description|
-   | ----- | ----- | ---- |
-|miles_start|INTEGER|Miles start|
-|miles_end|INTEGER|Miles end|
-|time_start|STRING|Format: `h:i A` (10:15 PM)|
-|time_end|STRING|Format: `h:i A` (10:15 PM)|
-|truck| STRING| Truck|
-|door| STRING| Door|
+
+ Property | Type | Description 
+ -------- | ---- | ----------- 
+miles_start | INTEGER | Miles start 
+miles_end | INTEGER | Miles end
+time_start | STRING | Format: `h:i A` (10:15 PM)
+time_end | STRING | Format: `h:i A` (10:15 PM)
+truck | STRING | Truck
+door | STRING | Door
+
 ### Example request
 ```
     $ curl -H "Content-Type: application/json" -X PUT -d '{"time_end":"10:20 AM"}' http://cbc.com/api/route/4?access-token=xxxxxxxxxxxxxxxxxxxxxxxxx
