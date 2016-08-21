@@ -226,6 +226,33 @@ image | STRING \| null | `Url` to image without domain. If not exist `null`
 created_at | STRING | Created date, format: `D/m/Y` (Aug/25/2016)
 created_by | STRING | Creator username
 
+### Example response:
+```
+      "notes": [
+        {
+          "id": 18,
+          "text": "some text",
+          "image": "/uploads/notes/C-G7AauUSlt97pbgfedXoi1lmHxpfMIa.png",
+          "created_at": "Aug/02/2016",
+          "created_by": "asd"
+        },
+        {
+          "id": 19,
+          "text": "texte",
+          "image": null,
+          "created_at": "Aug/05/2016",
+          "created_by": "serqio"
+        },
+        {
+          "id": 25,
+          "text": "teeext",
+          "image": "/uploads/notes/sU-XHc3aTsjhDQ9BrI11VZ_AoGEcZGAn.jpg",
+          "created_at": "Aug/20/2016",
+          "created_by": "serqio"
+        }
+      ]
+```
+
 # Common route json
 ```
 {
@@ -446,7 +473,7 @@ door | STRING | Door
 
 ### Example request
 ```
-    $ curl -H "Content-Type: application/json" -H "Authorization: Bearer Hlu7qYqtWczJAOJccTal9ZlA97IgmcII" -X PUT -d '{"time_end":"10:20 AM"}' http://cbc.com/api/route/4
+    $ curl -H "Content-Type: application/json" -H "Authorization: Bearer access_token" -X PUT -d '{"time_end":"10:20 AM"}' http://cbc.com/api/route/4
 ```
 # Errors 
 ### Unauthorized [See authenticate](https://github.com/CBCMoving/cbc_application/blob/master/Authenticate.md):

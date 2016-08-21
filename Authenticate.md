@@ -21,7 +21,7 @@ username | STRING | Driver username
 access_token | STRING | Token for bearer authentication
 office | STRING | Current office of this driver
 
-`access_token` must be sent in each request in bearer header: `Authorization: Bearer Hlu7qYqtWczJAOJccTal9ZlA97IgmcII`.
+`access_token` must be sent in each request in bearer header: `Authorization: Bearer access_token`.
 
 **Successful response:**
 ```
@@ -80,4 +80,4 @@ If the number of requests more 10 per 5 min, ip address will automatically locke
 
 ### Other request:
 	
-	$curl -H "Content-Type: application/json" -H "Authorization: Bearer Hlu7qYqtWczJAOJccTal9ZlA97IgmcII" -X GET http://domain/api/action
+	$curl -H "Content-Type: application/json" -H "Authorization: Bearer access_token" -X GET http://domain/api/action
