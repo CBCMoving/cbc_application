@@ -1,5 +1,5 @@
 # Get 5 the latest routes from today
-Method: `GET` Url: `http://domain/api/route?access-token=xxxxxxxxxxxxxxxxxxx`
+Method: `GET` Url: `http://domain/api/route`
 ### Returns properties:
 
 Property | Type | Description
@@ -57,7 +57,7 @@ limit_stops | INT \| null | Limit stops
 ]
 ```
 # Load more information by route
-Method: `GET` Url: `http://domain/api/route/<ID>?access-token=xxxxxxxxxxxxxxxxxxx`
+Method: `GET` Url: `http://domain/api/route/<ID>`
 ### Returns properties:
 
 Property | Type | Description
@@ -429,7 +429,7 @@ created_by | STRING | Creator username
 # Update route
 Methods: `PATCH`, `PUT`. 
 
-Url: `http://domain/api/route/<ID>?access-token=xxxxxxxxxxxxxxxxxxx`
+Url: `http://domain/api/route/<ID>`
 All params transmitted to the body of the request in json format.
 > Sent should be only parameters which you want to change. Empty or null parameter will overwrite current value.
 
@@ -446,10 +446,10 @@ door | STRING | Door
 
 ### Example request
 ```
-    $ curl -H "Content-Type: application/json" -X PUT -d '{"time_end":"10:20 AM"}' http://cbc.com/api/route/4?access-token=xxxxxxxxxxxxxxxxxxxxxxxxx
+    $ curl -H "Content-Type: application/json" -H "Authorization: Bearer Hlu7qYqtWczJAOJccTal9ZlA97IgmcII" -X PUT -d '{"time_end":"10:20 AM"}' http://cbc.com/api/route/4
 ```
 # Errors 
-### Unauthorized:
+### Unauthorized [See authenticate](https://github.com/CBCMoving/cbc_application/blob/master/Authenticate.md):
 ```
 {
   "name": "Unauthorized",

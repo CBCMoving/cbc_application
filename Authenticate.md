@@ -1,18 +1,38 @@
 # Authenticate app
+Methods: `POST`, `PUT`.
+
 Authentication url: `http://domain/api/auth`.
-Avilable methods: `POST`, `PUT`.
+
+### Params for sending:
+
+Property | Type | Description
+-------- | ---- | -----------
+username | STRING | Driver username
+password | STRING | Driver password
+
 Required params: `username`, `password` transmitted to the body of the request in json format.
 If authentication is successful, the server returns `username`, `access_token`, `office`. 
-`access_token` must be sent in each request: `http://domain/api/action?access-token=xxxxxxxxxxxxxxxxxx`.
+
+### Returns properties:
+
+Property | Type | Description
+-------- | ---- | -----------
+username | STRING | Driver username
+access_token | STRING | Token for bearer authentication
+office | STRING | Current office of this driver
+
+`access_token` must be sent in each request in bearer header: `Authorization: Bearer Hlu7qYqtWczJAOJccTal9ZlA97IgmcII`.
 
 **Successful response:**
 ```
 	{
 		"username": "super_driver",
-		"access_token": "PyYdSlQOqoH_u-TBU_PeliF1xiZAiQxS",
+		"access_token": "Hlu7qYqtWczJAOJccTal9ZlA97IgmcII",
 		"office":"Kent"
 	}
 ```
+
+# Errors
 
 **Missing required fields:**
 ```
@@ -52,6 +72,12 @@ If the number of requests more 10 per 5 min, ip address will automatically locke
 
 # Example request:
 
+### Authorization:
+
 	$ curl -H "Content-Type: application/json" -X POST -d '{"username":"username","password":"password"}' http://domain/api/auth
 
 	$ curl -H "Content-Type: application/json" -X PUT -d '{"username":"username","password":"password"}' http://domain/api/auth
+
+### Other request:
+	
+	$curl -H "Content-Type: application/json" -H "Authorization: Bearer Hlu7qYqtWczJAOJccTal9ZlA97IgmcII" -X GET http://domain/api/action
