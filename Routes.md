@@ -215,7 +215,8 @@ description | STRING \| "" | Item description
       ],
 ```
 # Order notes
-Will be loaded only notes for driver.
+> Will be loaded only notes for driver.
+
 ### Note properties:
 
 Property | Type | Description
@@ -476,7 +477,7 @@ door | STRING | Door
     $ curl -H "Content-Type: application/json" -H "Authorization: Bearer access_token" -X PUT -d '{"time_end":"10:20 AM"}' http://cbc.com/api/route/4
 ```
 # Errors 
-### Unauthorized [See authenticate](https://github.com/CBCMoving/cbc_application/blob/master/Authenticate.md):
+### Unauthorized ([See authenticate](https://github.com/CBCMoving/cbc_application/blob/master/Authenticate.md)):
 ```
 {
   "name": "Unauthorized",
