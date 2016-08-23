@@ -1,4 +1,4 @@
-# Get 5 the latest routes from today
+# Get 5 the latest routes starting from today
 Method: `GET` Url: `http://domain/api/route`
 ### Returns properties:
 
