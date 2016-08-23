@@ -23,7 +23,7 @@ office | STRING | Current office of this driver
 
 `access_token` must be sent in each request in bearer header: `Authorization: Bearer access_token`.
 
-**Successful response:**
+### Successful response:
 ```
 	{
 		"username": "super_driver",
@@ -34,7 +34,7 @@ office | STRING | Current office of this driver
 
 # Errors
 
-**Missing required fields:**
+### Missing required fields: 
 ```
 [
 	{
@@ -48,7 +48,7 @@ office | STRING | Current office of this driver
 ]
 ```
 
-**Invalid username/password:**
+### Invalid username/password:
 ```
 	[
 		{
@@ -59,7 +59,7 @@ office | STRING | Current office of this driver
 ```
 
 If the number of requests more 10 per 5 min, ip address will automatically locked on 20 min.
-**Block ip:**
+### Block ip: 
 ```
 	{
 		"name":"Forbidden",
