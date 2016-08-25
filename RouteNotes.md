@@ -1,7 +1,7 @@
-# Create order note
+# Create route note
 Method: `POST`.
 
-Url: `http://domain/api/orders/<ORDER_ID>/notes`.
+Url: `http://domain/api/routes/<ROUTE_ID>/notes`.
 
 ### Params for sending:
 
@@ -17,8 +17,6 @@ Property | Type | Description
 id | INT | Note identifier 
 text | STRING | Text note
 image | null | `null` because attached separately
-created_at | STRING | Created date, format: `D/m/Y` (Aug/25/2016)
-created_by | STRING | Creator username
 
 
 ### Example response:
@@ -27,14 +25,12 @@ created_by | STRING | Creator username
   "id": 18,
   "text": "some text",
   "image": null,
-  "created_at": "Aug/02/2016",
-  "created_by": "driver_username"
 }
 ```
 
 ### Example request: 
 
-  $ curl -H "Content-Type: application/json" -H "Authorization: Bearer access_token" -X POST -d '{"text":"some text"}' http://domain/api/orders/4/notes
+  $ curl -H "Content-Type: application/json" -H "Authorization: Bearer access_token" -X POST -d '{"text":"some text"}' http://domain/api/routes/4/notes
 
 
 # Attach image to note
@@ -42,7 +38,7 @@ Image sent with using `multipart/form-data`.
 
 Method: `POST`.
 
-Url: `http://domain/api/orders/notes/<NOTE_ID>/image`.
+Url: `http://domain/api/routes/notes/<NOTE_ID>/image`.
 
 ### Params for sending:
 
@@ -58,8 +54,6 @@ Property | Type | Description
 id | INT | Note identifier 
 text | STRING | Text note
 image | STRING | `Url` to image without domain.
-created_at | STRING | Created date, format: `D/m/Y` (Aug/25/2016)
-created_by | STRING | Creator username
 
 
 ### Example response:
@@ -68,14 +62,12 @@ created_by | STRING | Creator username
   "id": 18,
   "text": "some text",
   "image": "/uploads/notes/C-G7AauUSlt97pbgfedXoi1lmHxpfMIa.png",
-  "created_at": "Aug/02/2016",
-  "created_by": "driver_username"
 }
 ```
 
 ### Example request
 
-  $ curl -H "Authorization: Bearer Hlu7qYqtWczJAOJccTal9ZlA97IgmcII" -H "Content-Type: multipart/form-data" -X POST -F image='@/path/to/image.png' http://domain/api/orders/notes/28/image
+  $ curl -H "Authorization: Bearer Hlu7qYqtWczJAOJccTal9ZlA97IgmcII" -H "Content-Type: multipart/form-data" -X POST -F image='@/path/to/image.png' http://domain/api/routes/notes/28/image
 
 # Errors
 
@@ -108,11 +100,11 @@ created_by | STRING | Creator username
 ]
 ```
 
-### Order not found
+### Route not found
 ```
 {
   "name": "Not Found",
-  "message": "Order not found",
+  "message": "Route not found",
   "code": 0,
   "status": 404,
   "type": "yii\\web\\NotFoundHttpException"
