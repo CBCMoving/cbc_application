@@ -1,7 +1,7 @@
 # Update order
 Methods: `PATCH`, `PUT`.
 
-Url: `http://domain/api/order/<ID>`.
+Url: `http://domain/api/orders/<ID>`.
 
 ### Params for sending:
 
@@ -101,4 +101,4 @@ service | STRING \| "" | If exist: (`WG|T|RC`)
 
 Example request: 
 
-	$ curl -H "Content-Type: application/json" -H "Authorization: Bearer access_token" -X PUT -d '{"status":"4"}' http://domain/api/order/4
+	$ curl -H "Content-Type: application/json" -H "Authorization: Bearer access_token" -X PUT -d '{"status":"4"}' http://domain/api/orders/4
