@@ -27,7 +27,8 @@ created_by | STRING | Creator username
 
 
 # Attach image to note
-Image sent with using multipart/form-data.
+Image sent with using `multipart/form-data`.
+
 Method: `POST`.
 
 Url: `http://domain/api/notes/<NOTE_ID>/image`.
@@ -45,13 +46,13 @@ Property | Type | Description
 -------- | ---- | -----------
 id | INT | Note identifier 
 text | STRING | Text note
-image | STRING \| null | `Url` to image without domain. If not exist `null`
+image | STRING | `Url` to image without domain.
 created_at | STRING | Created date, format: `D/m/Y` (Aug/25/2016)
 created_by | STRING | Creator username
 
 
 ### Example request
-  $ curl -H "Authorization: Bearer Hlu7qYqtWczJAOJccTal9ZlA97IgmcII" -H "Content-Type: multipart/form-data" -X POST -F image='@Firefox_wallpaper.png' http://domain/api/notes/28/image
+  $ curl -H "Authorization: Bearer Hlu7qYqtWczJAOJccTal9ZlA97IgmcII" -H "Content-Type: multipart/form-data" -X POST -F image='@/path/to/image.png' http://domain/api/notes/28/image
 
 # Errors
 
