@@ -29,9 +29,9 @@ image | null | `null` because attached separately
 ```
 
 ### Example request: 
-
+```
   $ curl -H "Content-Type: application/json" -H "Authorization: Bearer access_token" -X POST -d '{"text":"some text"}' http://domain/api/routes/4/notes
-
+```
 
 # Attach image to note
 Image sent with using `multipart/form-data`.
@@ -65,9 +65,10 @@ image | STRING | `Url` to image without domain.
 }
 ```
 
-### Example request
-
-  $ curl -H "Authorization: Bearer Hlu7qYqtWczJAOJccTal9ZlA97IgmcII" -H "Content-Type: multipart/form-data" -X POST -F image='@/path/to/image.png' http://domain/api/routes/notes/28/image
+### Example request:
+```
+  $ curl -H "Authorization: Bearer access_token" -H "Content-Type: multipart/form-data" -X POST -F image='@/path/to/image.png' http://domain/api/routes/notes/28/image
+```
 
 # Errors
 
