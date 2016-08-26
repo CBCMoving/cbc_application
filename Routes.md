@@ -79,6 +79,7 @@ limit_stops | INT \| null | Limit stops
 notes | [] | [See below](https://github.com/CBCMoving/cbc_application/blob/master/Routes.md#route-notes) &darr;
 orders | [] | [See below](https://github.com/CBCMoving/cbc_application/blob/master/Routes.md#orders) &darr;
 
+
 # Route notes
 Returns array of json object with note.
 ### Returns properties:
@@ -138,6 +139,7 @@ spec_instruction | STRING \| "" | Special instruction
 service | STRING \| "" | If exist: (`WG|T|RC`) 
 items | [] | [See below](https://github.com/CBCMoving/cbc_application/blob/master/Routes.md#order-items) &darr; 
 notes | [] | [See below](https://github.com/CBCMoving/cbc_application/blob/master/Routes.md#order-notes) &darr; 
+call | {} \| null | [See below](https://github.com/CBCMoving/cbc_application/blob/master/Routes.md#call) &darr;
 
 ### Example response:
 ```
@@ -165,7 +167,8 @@ notes | [] | [See below](https://github.com/CBCMoving/cbc_application/blob/maste
       "type": "Delivery",
       "service":"WG",
       "items": [],
-      'notes': [],
+      "notes": [],
+      "call": null
     }
   ]
 ```
@@ -252,6 +255,34 @@ created_by | STRING | Creator username
           "created_by": "serqio"
         }
       ]
+```
+# Call
+Last precall (See - [Order calls](https://github.com/CBCMoving/cbc_application/blob/master/OrderCalls.md "Watch more"))
+
+### Note properties:
+
+Property | Type | Description
+---------| ---- | -----------
+id | INT | Call identifier
+name | STRING | Name
+phone | STRING | Format: `999.999.9999`
+answered | BOOLEAN | `0`\|`1`
+confirmed | BOOLEAN | `0`\|`1`
+left_message | BOOLEAN | Left a message. `0`\|`1`
+note | STRING | Note
+time_called | STRING | Format: `h:i A` (10:15 AM)
+
+### Example response
+```
+      "call": {
+        "id": 13,
+        "name": "naaaame",
+        "phone": "123.123.1231",
+        "answered": 0,
+        "note": "nooooot111111e",
+        "confirmed": 1,
+        "left_message": 0
+      }
 ```
 
 # Common route json
@@ -357,7 +388,8 @@ created_by | STRING | Creator username
           "image": "/uploads/notes/EiCTF_kMf36DdQtBoYHwOChhQgpc1bJk.png",
           "created_at": "Aug/19/2016",
           "created_by": "serqio"
-        }
+        },
+      "call" : null
       ]
     },
     {
@@ -423,8 +455,17 @@ created_by | STRING | Creator username
           "image": "/uploads/notes/sU-XHc3aTsjhDQ9BrI11VZ_AoGEcZGAn.jpg",
           "created_at": "Aug/20/2016",
           "created_by": "serqio"
-        }
-      ]
+        }        
+      ],
+      "call": {
+        "id": 13,
+        "name": "naaaame",
+        "phone": "123.123.1231",
+        "answered": 0,
+        "note": "nooooot111111e",
+        "confirmed": 1,
+        "left_message": 0
+      }      
     },
     {
       "id": 9,
@@ -449,7 +490,8 @@ created_by | STRING | Creator username
       "type": "Delivery",
       "service":"WG",
       "items": [],
-      "notes": []
+      "notes": [],
+      "call": null
     }
   ]
 }
