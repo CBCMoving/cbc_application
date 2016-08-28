@@ -13,7 +13,7 @@ exterior_packing | BOOLEAN | - | `1`\|`0`
 two_people | BOOLEAN | - | `1`\|`0`
 arrive_time_window | BOOLEAN | - | `1`\|`0`
 comments | STRING | - | Comments (max length: 10000 characters)
-items | [] | + | [See below](https://github.com/CBCMoving/cbc_application/blob/master/Routes.md#items) &darr;
+items | [] | + | [See below](https://github.com/CBCMoving/cbc_application/blob/master/OrderSurvey.md#items) &darr;
 
 
 ## Items 
@@ -40,8 +40,8 @@ satisfied_delivery_team | STRING | `completely_unsatisfied`, `somewhat_unsatisfi
 exterior_packing | BOOLEAN\|null | Exterior packing
 two_people | BOOLEAN\|null | Two people
 arrive_time_window | BOOLEAN\|null | Arrive time window
-comments | STRING | - | Comments (max length: 10000 characters)
-items | [] | + | [See below](https://github.com/CBCMoving/cbc_application/blob/master/OrderSurvey.md#items-2) &darr;
+comments | STRING | Comments (max length: 10000 characters)
+items | [] | [See below](https://github.com/CBCMoving/cbc_application/blob/master/OrderSurvey.md#items-1) &darr;
 
 ### Items:
 Property | Type | Description
@@ -116,7 +116,7 @@ Image sent with using `multipart/form-data`.
 
 Method: `POST`.
 
-Url: `http://domain/api/orders/<ORDER_ID>/survey/signature
+Url: `http://domain/api/orders/<ORDER_ID>/survey/signature`
 
 ### Params for sending:
 
