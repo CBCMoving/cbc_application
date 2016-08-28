@@ -7,7 +7,7 @@ Url: `http://domain/api/routes/<ROUTE_ID>/notes`.
 
 Property | Type | Description
 -------- | ---- | -----------
-text | STRING | Text of note
+text | STRING | Text of note (Max length: 5000 characters)
 
 
 ### Returns properties of created note:

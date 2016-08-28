@@ -9,12 +9,12 @@ If call with `order_id`, `time_called` and current driver are exists, then new d
 
 Property | Type | Description
 -------- | ---- | -----------
-name | STRING | Name
+name | STRING | Name (Max length: 300 characters)
 phone | STRING | Format: `999.999.9999`
 answered | BOOLEAN | `0`\|`1`
 confirmed | BOOLEAN | `0`\|`1`
 left_message | BOOLEAN | Left a message. `0`\|`1`
-note | STRING | Note
+note | STRING | Note (Max length: 500 characters)
 time_called | STRING | Format: `h:i A` (10:15 AM)
 
 

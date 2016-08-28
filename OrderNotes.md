@@ -7,7 +7,7 @@ Url: `http://domain/api/orders/<ORDER_ID>/notes`.
 
 Property | Type | Description
 -------- | ---- | -----------
-text | STRING | Text of note
+text | STRING | Text of note (Max length: 300 characters)
 
 
 ### Returns properties of created note:

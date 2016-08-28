@@ -12,7 +12,7 @@ satisfied_delivery_team | STRING | + | May be: `completely_unsatisfied`, `somewh
 exterior_packing | BOOLEAN | - | `1`\|`0`
 two_people | BOOLEAN | - | `1`\|`0`
 arrive_time_window | BOOLEAN | - | `1`\|`0`
-comments | STRING | - | Comments (max length: 10000 characters)
+comments | STRING | - | Comments (Max length: 10000 characters)
 items | [] | + | [See below](https://github.com/CBCMoving/cbc_application/blob/master/OrderSurvey.md#items) &darr;
 
 
@@ -40,7 +40,7 @@ satisfied_delivery_team | STRING | `completely_unsatisfied`, `somewhat_unsatisfi
 exterior_packing | BOOLEAN\|null | Exterior packing
 two_people | BOOLEAN\|null | Two people
 arrive_time_window | BOOLEAN\|null | Arrive time window
-comments | STRING | Comments (max length: 10000 characters)
+comments | STRING | Comments 
 items | [] | [See below](https://github.com/CBCMoving/cbc_application/blob/master/OrderSurvey.md#items-1) &darr;
 
 ### Items:

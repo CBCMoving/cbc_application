@@ -511,8 +511,8 @@ miles_start | INTEGER | Miles start
 miles_end | INTEGER | Miles end
 time_start | STRING | Format: `h:i A` (10:15 PM)
 time_end | STRING | Format: `h:i A` (10:15 PM)
-truck | STRING | Truck
-door | STRING | Door
+truck | STRING | Truck (Max length: 300 characters)
+door | STRING | Door (Max length: 300 characters)
 
 ### Example request
 ```
