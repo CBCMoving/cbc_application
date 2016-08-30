@@ -34,7 +34,7 @@ created_by | STRING | Creator username
 
 ### Example request: 
 ```
-  $ curl -H "Content-Type: application/json" -H "Authorization: Bearer access_token" -X POST -d '{"text":"some text"}' http://domain/api/orders/4/notes
+  $ curl -H "Content-Type: application/json" -H "Authorization: Bearer access_token" -H "Dev-Token: dev_token" -X POST -d '{"text":"some text"}' http://domain/api/orders/4/notes
 ```
 
 # Attach image to note
@@ -75,7 +75,7 @@ created_by | STRING | Creator username
 
 ### Example request:
 ```
-  $ curl -H "Authorization: Bearer access_token" -H "Content-Type: multipart/form-data" -X POST -F image='@/path/to/image.png' http://domain/api/orders/notes/28/image
+  $ curl -H "Authorization: Bearer access_token" -H "Content-Type: multipart/form-data" -H "Dev-Token: dev_token" -X POST -F image='@/path/to/image.png' http://domain/api/orders/notes/28/image
 ```
 
 # Errors
@@ -88,6 +88,17 @@ created_by | STRING | Creator username
   "code": 0,
   "status": 401,
   "type": "yii\\web\\UnauthorizedHttpException"
+}
+```
+
+### Developer token error:
+```
+{
+  "name": "Forbidden",
+  "message": "Dev token authentication has failed.",
+  "code": 0,
+  "status": 403,
+  "type": "yii\\web\\ForbiddenHttpException"
 }
 ```
 

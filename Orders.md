@@ -78,6 +78,17 @@ service | STRING \| "" | If exist: (`WG|T|RC`)
 }
 ```
 
+### Developer token error:
+```
+{
+  "name": "Forbidden",
+  "message": "Dev token authentication has failed.",
+  "code": 0,
+  "status": 403,
+  "type": "yii\\web\\ForbiddenHttpException"
+}
+```
+
 ### Missing/Wrong format fields: 
 ```
 [
@@ -101,4 +112,4 @@ service | STRING \| "" | If exist: (`WG|T|RC`)
 
 Example request: 
 
-	$ curl -H "Content-Type: application/json" -H "Authorization: Bearer access_token" -X PUT -d '{"status":"4"}' http://domain/api/orders/4
+	$ curl -H "Content-Type: application/json" -H "Authorization: Bearer access_token" -H "Dev-Token: dev_token" -X PUT -d '{"status":"4"}' http://domain/api/orders/4

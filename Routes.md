@@ -265,7 +265,7 @@ Property | Type | Description
 ---------| ---- | -----------
 id | INT | Call identifier
 name | STRING | Name
-phone | STRING | Format: `999.999.9999`
+phone | STRING | Format: `999-999-9999`
 answered | BOOLEAN | `0`\|`1`
 confirmed | BOOLEAN | `0`\|`1`
 left_message | BOOLEAN | Left a message. `0`\|`1`
@@ -277,7 +277,7 @@ time_called | STRING | Format: `h:i A` (10:15 AM)
       "call": {
         "id": 13,
         "name": "naaaame",
-        "phone": "123.123.1231",
+        "phone": "123-123-1231",
         "answered": 0,
         "note": "nooooot111111e",
         "confirmed": 1,
@@ -400,10 +400,10 @@ time_called | STRING | Format: `h:i A` (10:15 AM)
       "address2": "",
       "city": "Gotham city",
       "zip": "",
-      "phone": "321.123.123",
-      "phone_home": "111.132.543",
+      "phone": "321-123-1123",
+      "phone_home": "111-132-1543",
       "phone_other": "",
-      "fax": "228.228.123",
+      "fax": "",
       "pieces": null,
       "cartons": null,
       "description": "",
@@ -460,7 +460,7 @@ time_called | STRING | Format: `h:i A` (10:15 AM)
       "call": {
         "id": 13,
         "name": "naaaame",
-        "phone": "123.123.1231",
+        "phone": "123-123-1231",
         "answered": 0,
         "note": "nooooot111111e",
         "confirmed": 1,
@@ -516,7 +516,7 @@ door | STRING | Door (Max length: 300 characters)
 
 ### Example request
 ```
-    $ curl -H "Content-Type: application/json" -H "Authorization: Bearer access_token" -X PUT -d '{"time_end":"10:20 AM"}' http://cbc.com/api/routes/4
+    $ curl -H "Content-Type: application/json" -H "Authorization: Bearer access_token" -H "Dev-Token: dev_token" -X PUT -d '{"time_end":"10:20 AM"}' http://cbc.com/api/routes/4
 ```
 # Errors 
 ### Unauthorized ([See authenticate](https://github.com/CBCMoving/cbc_application/blob/master/Authenticate.md)):
@@ -529,6 +529,18 @@ door | STRING | Door (Max length: 300 characters)
   "type": "yii\\web\\UnauthorizedHttpException"
 }
 ```
+
+### Developer token error:
+```
+{
+  "name": "Forbidden",
+  "message": "Dev token authentication has failed.",
+  "code": 0,
+  "status": 403,
+  "type": "yii\\web\\ForbiddenHttpException"
+}
+```
+
 ### Route not found
 ```
 {

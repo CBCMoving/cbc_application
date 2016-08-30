@@ -30,7 +30,7 @@ image | null | `null` because attached separately
 
 ### Example request: 
 ```
-  $ curl -H "Content-Type: application/json" -H "Authorization: Bearer access_token" -X POST -d '{"text":"some text"}' http://domain/api/routes/4/notes
+  $ curl -H "Content-Type: application/json" -H "Authorization: Bearer access_token" -H "Dev-Token: dev_token" -X POST -d '{"text":"some text"}' http://domain/api/routes/4/notes
 ```
 
 # Attach image to note
@@ -67,7 +67,7 @@ image | STRING | `Url` to image without domain.
 
 ### Example request:
 ```
-  $ curl -H "Authorization: Bearer access_token" -H "Content-Type: multipart/form-data" -X POST -F image='@/path/to/image.png' http://domain/api/routes/notes/28/image
+  $ curl -H "Authorization: Bearer access_token" -H "Content-Type: multipart/form-data" -H "Dev-Token: dev_token" -X POST -F image='@/path/to/image.png' http://domain/api/routes/notes/28/image
 ```
 
 # Errors
@@ -80,6 +80,17 @@ image | STRING | `Url` to image without domain.
   "code": 0,
   "status": 401,
   "type": "yii\\web\\UnauthorizedHttpException"
+}
+```
+
+### Developer token error:
+```
+{
+  "name": "Forbidden",
+  "message": "Dev token authentication has failed.",
+  "code": 0,
+  "status": 403,
+  "type": "yii\\web\\ForbiddenHttpException"
 }
 ```
 

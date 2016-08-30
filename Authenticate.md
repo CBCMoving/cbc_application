@@ -1,7 +1,9 @@
 # Authenticate app
 Methods: `POST`, `PUT`.
 
-Authentication url: `http://domain/api/auth`.
+Authorization url: `http://domain/api/auth`.
+
+In each request to api should be additional header `Dev-Token`. At which transmitted Developer token, token give from customer application.
 
 ### Params for sending:
 
@@ -17,7 +19,7 @@ If authentication is successful, the server returns `username`, `access_token`, 
 
 Property | Type | Description
 -------- | ---- | -----------
-username | STRING | Driver username
+username | STRING | Driver username or email
 access_token | STRING | Token for bearer authentication
 office | STRING | Current office of this driver
 
@@ -48,6 +50,17 @@ office | STRING | Current office of this driver
 ]
 ```
 
+### Developer token error:
+```
+{
+  "name": "Forbidden",
+  "message": "Dev token authentication has failed.",
+  "code": 0,
+  "status": 403,
+  "type": "yii\\web\\ForbiddenHttpException"
+}
+```
+
 ### Invalid username/password:
 ```
 	[
@@ -73,11 +86,13 @@ If the number of requests more 10 per 5 min, ip address will automatically locke
 # Example request:
 
 ### Authorization:
+```
+	$ curl -H "Content-Type: application/json" -H "Dev-Token: dev_token" -X POST -d '{"username":"username","password":"password"}' http://domain/api/auth
 
-	$ curl -H "Content-Type: application/json" -X POST -d '{"username":"username","password":"password"}' http://domain/api/auth
-
-	$ curl -H "Content-Type: application/json" -X PUT -d '{"username":"username","password":"password"}' http://domain/api/auth
+	$ curl -H "Content-Type: application/json" -H "Dev-Token: dev_token" -X PUT -d '{"username":"username","password":"password"}' http://domain/api/auth
+```
 
 ### Other request:
-	
-	$curl -H "Content-Type: application/json" -H "Authorization: Bearer access_token" -X GET http://domain/api/action
+```
+	$curl -H "Content-Type: application/json" -H "Authorization: Bearer access_token" -H "Dev-Token: dev_token" -X GET http://domain/api/action
+```

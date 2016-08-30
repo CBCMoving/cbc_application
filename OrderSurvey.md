@@ -89,7 +89,7 @@ inititals | STRING | Initials
 
 ### Example request: 
 ```
-  $ curl -H "Content-Type: application/json" -H "Authorization: Bearer Hlu7qYqtWczJAOJccTal9ZlA97IgmcII" -X POST -d '{
+  $ curl -H "Content-Type: application/json" -H "Authorization: Bearer Hlu7qYqtWczJAOJccTal9ZlA97IgmcII" -H "Dev-Token: dev_token" -X POST -d '{
   "name": "Ivan",
   "satisfied_delivery_team": "completely_unsatisfied",
   "exterior_packing": 1,
@@ -131,7 +131,7 @@ See above
 
 ### Example request:
 ```
-  $ curl -H "Authorization: Bearer access_token" -H "Content-Type: multipart/form-data" -X POST -F signature='@/path/to/image.png' http://domain/api/orders/4/survey/signature
+  $ curl -H "Authorization: Bearer access_token" -H "Content-Type: multipart/form-data" -H "Dev-Token: dev_token" -X POST -F signature='@/path/to/image.png' http://domain/api/orders/4/survey/signature
 ```
 
 # Errors
@@ -144,6 +144,17 @@ See above
   "code": 0,
   "status": 401,
   "type": "yii\\web\\UnauthorizedHttpException"
+}
+```
+
+### Developer token error:
+```
+{
+  "name": "Forbidden",
+  "message": "Dev token authentication has failed.",
+  "code": 0,
+  "status": 403,
+  "type": "yii\\web\\ForbiddenHttpException"
 }
 ```
 

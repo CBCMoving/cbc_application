@@ -10,7 +10,7 @@ If call with `order_id`, `time_called` and current driver are exists, then new d
 Property | Type | Description
 -------- | ---- | -----------
 name | STRING | Name (Max length: 300 characters)
-phone | STRING | Format: `999.999.9999`
+phone | STRING | Format: `999-999-9999`
 answered | BOOLEAN | `0`\|`1`
 confirmed | BOOLEAN | `0`\|`1`
 left_message | BOOLEAN | Left a message. `0`\|`1`
@@ -24,7 +24,7 @@ Property | Type | Description
 -------- | ---- | -----------
 id | INT | Call identifier 
 name | STRING | Name
-phone | STRING | Format: `999.999.9999`
+phone | STRING | Format: `999-999-9999`
 answered | BOOLEAN | `0`\|`1`
 confirmed | BOOLEAN | `0`\|`1`
 left_message | BOOLEAN | Left a message. `0`\|`1`
@@ -37,7 +37,7 @@ time_called | STRING | Format: `h:i A` (10:15 AM)
 {
   "id": 11,
   "name": "naaaame",
-  "phone": "123.123.1231",
+  "phone": "123-123-1231",
   "answered": 0,
   "note": "nooooot111111e",
   "confirmed": 0,
@@ -46,8 +46,9 @@ time_called | STRING | Format: `h:i A` (10:15 AM)
 ```
 
 ### Example request: 
-
-  $ curl -H "Content-Type: application/json" -H "Authorization: Bearer access_token" -X POST -d '{"time_called":"12:22 AM","phone":"123.123.1231","name":"naaaame","note":"nooooot111111e"}' http://domain/api/orders/13/calls
+```
+  $ curl -H "Content-Type: application/json" -H "Authorization: Bearer access_token" -H "Dev-Token: dev_token" -X POST -d '{"time_called":"12:22 AM","phone":"123-123-1231","name":"naaaame","note":"nooooot111111e"}' http://domain/api/orders/13/calls
+```
 
 # Errors
 
@@ -59,6 +60,17 @@ time_called | STRING | Format: `h:i A` (10:15 AM)
   "code": 0,
   "status": 401,
   "type": "yii\\web\\UnauthorizedHttpException"
+}
+```
+
+### Developer token error:
+```
+{
+  "name": "Forbidden",
+  "message": "Dev token authentication has failed.",
+  "code": 0,
+  "status": 403,
+  "type": "yii\\web\\ForbiddenHttpException"
 }
 ```
 
