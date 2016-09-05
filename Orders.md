@@ -62,7 +62,7 @@ precall | STRING \| "" | Precall date (custom format)
 time_from | STRING \| "" | Format: `h:i A` (10:10 AM) 
 time_to | STRING \| "" | Format: `h:i A` (10:10 AM) 
 spec_instruction | STRING \| "" | Special instruction 
-service | STRING \| "" | If exist: (`WG|T|RC`)
+service | STRING \| null | If exist: (`WG|T|RC`)
 
 
 # Errors
