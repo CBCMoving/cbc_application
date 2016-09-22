@@ -184,6 +184,7 @@ cubic_feet | INT \| null | Cubic feet
 commodity | STRING \| "" | Commodity
 model | STRING \| "" | Model
 description | STRING \| "" | Item description
+cartons | INT \| null | Cartons
 
 ### Example response:
 ```
@@ -195,7 +196,8 @@ description | STRING \| "" | Item description
           "cubic_feet": null,
           "commodity": "Commodity prop",
           "model": "Model name",
-          "description": "My description"
+          "description": "My description",
+          "cartons": 1
         },
         {
           "id": 7,
@@ -204,7 +206,8 @@ description | STRING \| "" | Item description
           "cubic_feet": null,
           "commodity": "Commodity prop",
           "model": "Model name",
-          "description": ""
+          "description": "",
+          "cartons": null
         },
         {
           "id": 8,
@@ -213,7 +216,8 @@ description | STRING \| "" | Item description
           "cubic_feet": null,
           "commodity": "",
           "model": "",
-          "description": ""
+          "description": "",
+          "cartons": 1
         }
       ],
 ```
@@ -360,7 +364,8 @@ time_called | STRING | Format: `h:i A` (10:15 AM)
           "cubic_feet": null,
           "commodity": "commodity",
           "model": "Model",
-          "description": "Description"
+          "description": "Description",
+          "cartons": 1
         },
         {
           "id": 7,
@@ -369,7 +374,8 @@ time_called | STRING | Format: `h:i A` (10:15 AM)
           "cubic_feet": null,
           "commodity": "commodity",
           "model": "Model",
-          "description": ""
+          "description": "",
+          "cartons": null
         },
         {
           "id": 8,
@@ -378,7 +384,8 @@ time_called | STRING | Format: `h:i A` (10:15 AM)
           "cubic_feet": null,
           "commodity": "",
           "model": "",
-          "description": ""
+          "description": "",
+          "cartons": 1
         }
       ],
       "notes": [
@@ -422,7 +429,8 @@ time_called | STRING | Format: `h:i A` (10:15 AM)
           "cubic_feet": null,
           "commodity": "asdasdasd",
           "model": "",
-          "description": ""
+          "description": "",
+          "cartons": 1
         },
         {
           "id": 4,
@@ -431,7 +439,8 @@ time_called | STRING | Format: `h:i A` (10:15 AM)
           "cubic_feet": null,
           "commodity": "asdasdsad111111111",
           "model": "",
-          "description": ""
+          "description": "",
+          "cartons": 12
         }
       ],
       "notes": [
