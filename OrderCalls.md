@@ -23,12 +23,12 @@ time_called | STRING | Format: `h:i A` (10:15 AM)
 Property | Type | Description
 -------- | ---- | -----------
 id | INT | Call identifier 
-name | STRING | Name
+name | STRING | Name (Max length: 300 characters)
 phone | STRING | Format: `999-999-9999`
 answered | BOOLEAN | `0`\|`1`
 confirmed | BOOLEAN | `0`\|`1`
 left_message | BOOLEAN | Left a message. `0`\|`1`
-note | STRING | Note
+note | STRING | Note (Max length: 500 characters)
 time_called | STRING | Format: `h:i A` (10:15 AM)
 
 
@@ -41,7 +41,8 @@ time_called | STRING | Format: `h:i A` (10:15 AM)
   "answered": 0,
   "note": "nooooot111111e",
   "confirmed": 0,
-  "left_message": 0
+  "left_message": 0,
+  "time_called": "10:51 AM"
 }
 ```
 
