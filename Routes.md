@@ -396,8 +396,8 @@ time_called | STRING | Format: `h:i A` (10:15 AM)
           "created_at": "Aug/19/2016",
           "created_by": "serqio"
         },
+      ],
       "call" : null
-      ]
     },
     {
       "id": 4,
