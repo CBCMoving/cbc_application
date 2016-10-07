@@ -395,7 +395,7 @@ time_called | STRING | Format: `h:i A` (10:15 AM)
           "image": "/uploads/notes/EiCTF_kMf36DdQtBoYHwOChhQgpc1bJk.png",
           "created_at": "Aug/19/2016",
           "created_by": "serqio"
-        },
+        }
       ],
       "call" : null
     },
