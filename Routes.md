@@ -231,7 +231,7 @@ Property | Type | Description
 id | INT | Note identifier
 text | STRING | Text note
 image | STRING \| null | `Url` to image without domain. If not exist `null`
-created_at | STRING | Created date, format: `D/m/Y` (Aug/25/2016)
+created_at | STRING | Created date, format: `M/d/Y` (Aug/25/2016)
 created_by | STRING | Creator username
 
 ### Example response:
