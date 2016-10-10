@@ -7,7 +7,7 @@ Url: `http://domain/api/orders/<ORDER_ID>/notes`.
 
 Property | Type | Description
 -------- | ---- | -----------
-text | STRING | Text of note (Max length: 300 characters)
+text | STRING | Text of note (Max length: 5000 characters)
 
 
 ### Returns properties of created note:
@@ -43,6 +43,8 @@ Image sent with using `multipart/form-data`.
 Method: `POST`.
 
 Url: `http://domain/api/orders/notes/<NOTE_ID>/image`.
+
+> User can attach the image to the note created by self.
 
 ### Params for sending:
 
@@ -107,7 +109,7 @@ created_by | STRING | Creator username
 [
 	{
 		"field":"text",
-		"message":"Status cannot be blank."
+		"message":"Text cannot be blank."
 	}
 ]
 ```
