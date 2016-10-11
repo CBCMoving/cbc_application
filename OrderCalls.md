@@ -7,15 +7,15 @@ If call with `order_id`, `time_called` and current driver are exists, then new d
 
 ### Params for sending:
 
-Property | Type | Description
--------- | ---- | -----------
-name | STRING | Name (Max length: 300 characters)
-phone | STRING | Format: `999-999-9999`
-answered | BOOLEAN | `0`\|`1`
-confirmed | BOOLEAN | `0`\|`1`
-left_message | BOOLEAN | Left a message. `0`\|`1`
-note | STRING | Note (Max length: 500 characters)
-time_called | STRING | Format: `h:i A` (10:15 AM)
+Property | Type | Required | Description
+-------- | ---- | -------- | -----------
+name | STRING | `Yes` | Name (Max length: 300 characters)
+phone | STRING | `Yes` | Format: `999-999-9999`
+time_called | STRING | `Yes` | Format: `h:i A` (10:15 AM)
+answered | BOOLEAN | `Yes` | `0`\|`1`
+confirmed | BOOLEAN | `No` | `0`\|`1`
+left_message | BOOLEAN | `No` | Left a message. `0`\|`1`
+note | STRING | `No` | Note (Max length: 500 characters)
 
 
 ### Returns properties of created or updated call:
@@ -25,11 +25,11 @@ Property | Type | Description
 id | INT | Call identifier 
 name | STRING | Name (Max length: 300 characters)
 phone | STRING | Format: `999-999-9999`
+time_called | STRING | Format: `h:i A` (10:15 AM)
 answered | BOOLEAN | `0`\|`1`
 confirmed | BOOLEAN | `0`\|`1`
 left_message | BOOLEAN | Left a message. `0`\|`1`
 note | STRING | Note (Max length: 500 characters)
-time_called | STRING | Format: `h:i A` (10:15 AM)
 
 
 ### Example response:

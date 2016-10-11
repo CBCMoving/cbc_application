@@ -40,6 +40,8 @@ Method: `POST`.
 
 Url: `http://domain/api/routes/notes/<NOTE_ID>/image`.
 
+> User can attach image only to self created note.
+
 ### Params for sending:
 
 Property | Type | Description
