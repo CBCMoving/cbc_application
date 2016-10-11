@@ -3,7 +3,7 @@ Method: `POST`.
 
 Url: `http://domain/api/orders/<ORDER_ID>/calls`.
 
-If call with `order_id`, `time_called` and current driver are exists, then new data will override old data, not create new call.
+> If call with `order_id`, `time_called` and current driver are exists, then new data will override old data, not create new call.
 
 ### Params for sending:
 

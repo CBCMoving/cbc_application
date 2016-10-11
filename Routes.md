@@ -56,7 +56,7 @@ limit_stops | INT \| null | Limit stops
   }
 ]
 ```
-# Load more information by route
+# Load more detail of route
 Method: `GET` Url: `http://domain/api/routes/<ID>`
 ### Returns properties:
 
@@ -571,7 +571,7 @@ door | STRING | Door (Max length: 300 characters)
   },
   {
     "field": "time_end",
-    "message": "Wrong format. Allow: 99:99 AM or 99:99 PM"
+    "message": "The format of Time End is invalid."
   }
 ]
 ```

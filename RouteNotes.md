@@ -1,4 +1,4 @@
-# Create route note
+# Create route's note
 Method: `POST`.
 
 Url: `http://domain/api/routes/<ROUTE_ID>/notes`.
@@ -33,7 +33,7 @@ image | null | `null` because attached separately
   $ curl -H "Content-Type: application/json" -H "Authorization: Bearer access_token" -H "Dev-Token: dev_token" -X POST -d '{"text":"some text"}' http://domain/api/routes/4/notes
 ```
 
-# Attach image to note
+# Attach picture to note
 Image sent with using `multipart/form-data`.
 
 Method: `POST`.

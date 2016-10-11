@@ -1,4 +1,4 @@
-# Create/update order survey
+# Create/update order's survey
 Method: `POST`.
 
 Url: `http://domain/api/orders/<ORDER_ID>/survey`.
@@ -7,13 +7,13 @@ Url: `http://domain/api/orders/<ORDER_ID>/survey`.
 
 Property | Type | Required | Description
 -------- | ---- | --------| -----------
-name | STRING | + | Name (max length: 200 characters)
-satisfied_delivery_team | STRING | + | May be: `completely_unsatisfied`, `somewhat_unsatisfied`, `average`, `somewhat_satisfied`, `completely_satisfied`
-exterior_packing | BOOLEAN | - | `1`\|`0`
-two_people | BOOLEAN | - | `1`\|`0`
-arrive_time_window | BOOLEAN | - | `1`\|`0`
-comments | STRING | - | Comments (Max length: 10000 characters)
-items | [] | + | [See below](https://github.com/CBCMoving/cbc_application/blob/master/OrderSurvey.md#items) &darr;
+name | STRING | `Yes` | Name (max length: 200 characters)
+satisfied_delivery_team | STRING | `Yes` | May be: `completely_unsatisfied`, `somewhat_unsatisfied`, `average`, `somewhat_satisfied`, `completely_satisfied`
+exterior_packing | BOOLEAN | `No` | `1`\|`0`
+two_people | BOOLEAN | `No` | `1`\|`0`
+arrive_time_window | BOOLEAN | `No` | `1`\|`0`
+comments | STRING | `No` | Comments (Max length: 10000 characters)
+items | [] | `Yes` | [See below](https://github.com/CBCMoving/cbc_application/blob/master/OrderSurvey.md#items) &darr;
 
 
 ## Items 
@@ -37,10 +37,10 @@ Property | Type | Description
 -------- | ---- | -----------
 name | STRING | Name 
 satisfied_delivery_team | STRING | `completely_unsatisfied`, `somewhat_unsatisfied`, `average`, `somewhat_satisfied`, `completely_satisfied`
-exterior_packing | BOOLEAN\|null | Exterior packing
-two_people | BOOLEAN\|null | Two people
-arrive_time_window | BOOLEAN\|null | Arrive time window
-comments | STRING | Comments 
+exterior_packing | BOOLEAN\|null | Exterior packing `1`\|`0`
+two_people | BOOLEAN\|null | Two people `1`\|`0`
+arrive_time_window | BOOLEAN\|null | Arrive time window `1`\|`0`
+comments | STRING\|"" | Comments 
 items | [] | [See below](https://github.com/CBCMoving/cbc_application/blob/master/OrderSurvey.md#items-1) &darr;
 
 ### Items:
@@ -111,7 +111,7 @@ inititals | STRING | Initials
 }' http://cbc.com/api/orders/4/survey
 ```
 
-# Attach image signature to survey
+# Attach signature's picture to survey
 Image sent with using `multipart/form-data`.
 
 Method: `POST`.

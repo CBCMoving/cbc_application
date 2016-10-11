@@ -1,4 +1,4 @@
-# Create order note
+# Create order's note
 Method: `POST`.
 
 Url: `http://domain/api/orders/<ORDER_ID>/notes`.
@@ -37,7 +37,7 @@ created_by | STRING | Creator username
   $ curl -H "Content-Type: application/json" -H "Authorization: Bearer access_token" -H "Dev-Token: dev_token" -X POST -d '{"text":"some text"}' http://domain/api/orders/4/notes
 ```
 
-# Attach image to note
+# Attach picture to note
 Image sent with using `multipart/form-data`.
 
 Method: `POST`.
