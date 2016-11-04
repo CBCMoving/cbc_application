@@ -56,7 +56,7 @@ class RoutesTest extends \Codeception\Test\Unit
     {
         return [
             'id' => 'integer',
-            'date' => 'string:date(m/d/Y)',
+            'date' => 'string:date(m/d/y)',
             'name' => 'string:!empty',
             'frame_open' => 'string:date(h:i A)|string:len(0)',
             'frame_close' => 'string:date(h:i A)|string:len(0)',

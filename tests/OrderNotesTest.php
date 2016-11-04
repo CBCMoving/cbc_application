@@ -59,7 +59,7 @@ class OrderNotesTest extends \Codeception\Test\Unit
             'id' => 'integer',
             'text' => 'string:!empty',
             'image' => 'string:file_exists|null',
-            'created_at' => 'string:date(m/d/Y)',
+            'created_at' => 'string:date(m/d/y)',
             'created_by' => 'string'
         ];
     }

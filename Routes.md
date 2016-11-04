@@ -5,7 +5,7 @@ Method: `GET` Url: `http://domain/api/routes`
 Property | Type | Description
 -------- | ---- | -----------
 id | INT | Route identifier
-date | STRING | Format: `M/d/Y` (Aug/25/2016)
+date | STRING | Format: `m/d/y` (09/25/16)
 name | STRING | Name
 frame_open | STRING \| "" | Frame open
 frame_close | STRING \| "" | Frame close
@@ -24,7 +24,7 @@ limit_stops | INT \| null | Limit stops
 [
   {
     "id": 4,
-    "date": "Aug/25/2016",
+    "date": "09/25/16",
     "frame_open": "",
     "frame_close": "",
     "stops": null,
@@ -40,7 +40,7 @@ limit_stops | INT \| null | Limit stops
   },
   {
     "id": 5,
-    "date": "Aug/27/2016",
+    "date": "09/27/16",
     "frame_open": "123",
     "frame_close": "123",
     "stops": 1,
@@ -63,7 +63,7 @@ Method: `GET` Url: `http://domain/api/routes/<ID>`
 Property | Type | Description
 -------- | ---- | -----------
 id | INT | Route identifier
-date | STRING | Format: `M/d/Y` (Aug/25/2016)
+date | STRING | Format: `m/d/y` (09/25/16)
 name | STRING | Name
 frame_open | STRING \| "" | Frame open
 frame_close | STRING \| "" | Frame close
@@ -231,7 +231,7 @@ Property | Type | Description
 id | INT | Note identifier
 text | STRING | Text note
 image | STRING \| null | `Url` to image without domain. If not exist `null`
-created_at | STRING | Created date, format: `M/d/Y` (Aug/25/2016)
+created_at | STRING | Created date, format: `m/d/y` (09/25/16)
 created_by | STRING | Creator username
 
 ### Example response:
@@ -241,21 +241,21 @@ created_by | STRING | Creator username
           "id": 18,
           "text": "some text",
           "image": "/uploads/notes/C-G7AauUSlt97pbgfedXoi1lmHxpfMIa.png",
-          "created_at": "Aug/02/2016",
+          "created_at": "09/02/16",
           "created_by": "asd"
         },
         {
           "id": 19,
           "text": "texte",
           "image": null,
-          "created_at": "Aug/05/2016",
+          "created_at": "09/05/16",
           "created_by": "serqio"
         },
         {
           "id": 25,
           "text": "teeext",
           "image": "/uploads/notes/sU-XHc3aTsjhDQ9BrI11VZ_AoGEcZGAn.jpg",
-          "created_at": "Aug/20/2016",
+          "created_at": "09/20/16",
           "created_by": "serqio"
         }
       ]
@@ -294,7 +294,7 @@ time_called | STRING\|"" | Format: `h:i A` (10:15 AM)
 ```
 {
   "id": 4,
-  "date": "Aug/25/2016",
+  "date": "09/25/16",
   "frame_open": "123123",
   "frame_close": "123123",
   "stops": 123,
@@ -394,7 +394,7 @@ time_called | STRING\|"" | Format: `h:i A` (10:15 AM)
           "id": 24,
           "text": "My order note",
           "image": "/uploads/notes/EiCTF_kMf36DdQtBoYHwOChhQgpc1bJk.png",
-          "created_at": "Aug/19/2016",
+          "created_at": "09/19/16",
           "created_by": "serqio"
         }
       ],
@@ -449,21 +449,21 @@ time_called | STRING\|"" | Format: `h:i A` (10:15 AM)
           "id": 18,
           "text": "some text",
           "image": "/uploads/notes/C-G7AauUSlt97pbgfedXoi1lmHxpfMIa.png",
-          "created_at": "Aug/02/2016",
+          "created_at": "09/02/16",
           "created_by": "asd"
         },
         {
           "id": 19,
           "text": "texte",
           "image": null,
-          "created_at": "Aug/05/2016",
+          "created_at": "09/05/16",
           "created_by": "serqio"
         },
         {
           "id": 25,
           "text": "teeext",
           "image": "/uploads/notes/sU-XHc3aTsjhDQ9BrI11VZ_AoGEcZGAn.jpg",
-          "created_at": "Aug/20/2016",
+          "created_at": "09/20/16",
           "created_by": "serqio"
         }        
       ],

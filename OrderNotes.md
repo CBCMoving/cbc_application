@@ -17,7 +17,7 @@ Property | Type | Description
 id | INT | Note identifier 
 text | STRING | Text note
 image | null | `null` because attached separately
-created_at | STRING | Created date, format: `m/d/Y` (09/25/2016)
+created_at | STRING | Created date, format: `m/d/y` (09/25/16)
 created_by | STRING | Creator username
 
 
@@ -27,7 +27,7 @@ created_by | STRING | Creator username
   "id": 18,
   "text": "some text",
   "image": null,
-  "created_at": "Aug/02/2016",
+  "created_at": 09/02/16",
   "created_by": "driver_username"
 }
 ```
@@ -60,7 +60,7 @@ Property | Type | Description
 id | INT | Note identifier 
 text | STRING | Text note
 image | STRING | `Url` to image without domain.
-created_at | STRING | Created date, format: `m/d/Y` (09/25/2016)
+created_at | STRING | Created date, format: `m/d/y` (09/25/16)
 created_by | STRING | Creator username
 
 
@@ -70,7 +70,7 @@ created_by | STRING | Creator username
   "id": 18,
   "text": "some text",
   "image": "/uploads/notes/C-G7AauUSlt97pbgfedXoi1lmHxpfMIa.png",
-  "created_at": "Aug/02/2016",
+  "created_at": "09/02/16",
   "created_by": "driver_username"
 }
 ```
