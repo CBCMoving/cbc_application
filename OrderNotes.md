@@ -17,7 +17,7 @@ Property | Type | Description
 id | INT | Note identifier 
 text | STRING | Text note
 image | null | `null` because attached separately
-created_at | STRING | Created date, format: `D/m/Y` (Aug/25/2016)
+created_at | STRING | Created date, format: `m/d/Y` (09/25/2016)
 created_by | STRING | Creator username
 
 
@@ -60,7 +60,7 @@ Property | Type | Description
 id | INT | Note identifier 
 text | STRING | Text note
 image | STRING | `Url` to image without domain.
-created_at | STRING | Created date, format: `D/m/Y` (Aug/25/2016)
+created_at | STRING | Created date, format: `m/d/Y` (09/25/2016)
 created_by | STRING | Creator username
 
 
